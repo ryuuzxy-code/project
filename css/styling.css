@@ -1,0 +1,140 @@
+/* Latar belakang halaman dengan gradasi abu-abu */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f2f2f2 0%, #d9d9d9 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container untuk tampilan desktop */
+.container {
+  width: 80%; /* Lebar container di desktop */
+  max-width: 500px; /* Batas maksimum untuk tampilan besar */
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.3); /* Efek kaca buram */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Bayangan halus */
+  margin: 20px auto;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+/* Form dalam container */
+form {
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spasi antar elemen */
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+  width: 100%;
+  text-align: left;
+}
+
+/* Input dan textarea yang dinamis */
+input, textarea {
+  width: 100%; /* Lebar input di desktop dan mobile */
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.6); /* Transparansi ringan */
+  color: #333;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px; /* Ukuran font default */
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Tombol kirim */
+button {
+  width: 250px;
+  padding: 15px;
+  display: block; /* Mengatur tombol menjadi block agar margin auto berfungsi */
+  margin: 0 auto; /* Memusatkan tombol secara horizontal */
+  background: linear-gradient(135deg, #e0e0e0 0%, #b3b3b3 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #cccccc 0%, #999999 100%);
+  transform: scale(1.05);
+}
+
+/* Pada tampilan HP dan layar kecil */
+@media (max-width: 768px) {
+  /* Hapus container untuk tampilan mobile */
+  .container {
+    width: 100%;
+    max-width: none; /* Hapus batas maksimal */
+    padding: 0; /* Hapus padding */
+    margin: 0; /* Tidak ada margin */
+    background: none; /* Hapus background container */
+    box-shadow: none; /* Hapus bayangan */
+    backdrop-filter: none; /* Hapus efek blur */
+  }
+
+  .header {
+    font-size: 24px; /* Ukuran font default untuk layar besar */
+    text-align: center; /* Memusatkan teks di dalam header */
+    margin: 20px 0; /* Margin atas dan bawah untuk spasi */
+}
+
+  /* Pusatkan input dan textarea di tampilan mobile */
+  input, textarea {
+    width: 70%; /* Input mengambil seluruh lebar layar */
+    margin: 0 auto; /* Memastikan input berada di tengah */
+    font-size: 14px; /* Ukuran font lebih kecil */
+    padding: 10px; /* Padding lebih kecil */
+  }
+
+  /* Tombol kirim di tampilan mobile */
+  button {
+    display: block; /* Mengatur tombol menjadi block agar margin auto berfungsi */
+    margin: 0 auto; /* Memusatkan tombol secara horizontal */
+    width: 70%; /* Lebar tombol */
+    font-size: 16px; /* Ukuran font tombol */
+    padding: 10px; /* Padding tombol */
+}
+
+  /* Mengubah ukuran label di tampilan mobile */
+  label {
+    font-size: 14px; /* Ukuran font label lebih kecil */
+    width: 70%; /* Mengatur lebar label agar sama dengan lebar tombol */
+    text-align: left; /* Memastikan teks label berada di sisi kiri */
+    margin: 0 auto; /* Memusatkan label secara horizontal */
+  }
+
+/* Pada tampilan sangat kecil, misalnya layar HP kecil */
+@media (max-width: 480px) {
+  input, textarea {
+    font-size: 13px; /* Ukuran font lebih kecil lagi */
+    padding: 8px; /* Padding lebih kecil */
+  }
+
+  button {
+    font-size: 14px; /* Ukuran font tombol lebih kecil */
+    padding: 10px; /* Padding tombol lebih kecil */
+  }
+}
+}

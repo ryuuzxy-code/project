@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX || Aerial Team</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="background">
+        <div class="container">
+            <h1>PENGADUAN ONLINE</h1>
+            <h4>SMK Negeri 3 Palu</h4>
+            <div><input type="text" id="username" placeholder="NISN"></div>
+            <div><input type="password" id="password" placeholder="KELAS"></div>
+            <button onclick="login()" type="button">Login</button>
+        </div>
+    </div>
+    
+    <script>
+        function login() {
+            // Ambil nilai dari input username dan password berdasarkan id
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+    
+            // Tentukan username dan password yang benar
+            const correctUsername = '123456789';
+            const correctPassword = 'XIRPLB';
+    
+            // Cek apakah nilai input sesuai dengan nilai yang benar
+            if (username === correctUsername && password === correctPassword) {
+                alert('Login successful!');
+                // Arahkan ke halaman home.html
+                window.location.href = 'home.html';
+            } else {
+                alert('Invalid username or password');
+            }
+        }
+    </script>
+    
+</body>
+</html>
